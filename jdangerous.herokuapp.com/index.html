@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from jdangerous.herokuapp.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2015 15:49:15 GMT -->
+<head>
+  <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+
+  <style>
+  @media only screen and (max-width: 480px) {
+    #background {
+      background: #d5d8da !important
+    }
+    #logo, #iphone, .download span, .download h2, .download img {
+      display: none;
+    }
+    #danger {
+      left: -355px !important;
+    }
+    .download {
+      top: 150px !important;
+      left: 25px !important;
+    }
+  }
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/bg.jpg) 0 0 no-repeat;
+    background-size: cover !important;
+    -moz-background-size: cover !important;
+    -webkit-background-size: cover !important;
+    z-index: -1
+  }
+  #hand {
+    width: 320px;
+    height: 240px;
+    position: relative;
+    left: 65%;
+    bottom: 50%;
+    z-index: 20;
+  }
+  #iphone {
+    width: 845px;
+    height: 972px;
+    background-image: url(images/hand.png);
+    position: absolute;
+    margin-left: -158px;
+    margin-top: -132px;
+  }
+  #apple_badge {
+    width: 147px;
+    height: 48px;
+    position: absolute;
+    top: 280px;
+    left: 0;
+    z-index: 20;
+  }
+  #apple_b {
+    background: url(images/badge_iOS-8cb18475442b562156ebb84c3fe84d6d.png) no-repeat;
+    width: 147px;
+    height: 48px;
+    transition: opacity .25s ease-out;
+    -moz-transition: opacity .25s ease-out;
+    -webkit-transition: opacity .25s ease-out;
+  }
+  #apple_b:hover {
+    background: url(images/badge_iOS_active-52a7d5f93bd8d8356fe6a3dad086852f%402x.png) no-repeat!important;
+    background-size: 147px 48px!important;
+  }
+  #apple_coming_soon {
+    color: #fff;
+    background: #000;
+    width: 147px;
+    border-radius: 3px;
+    transition: opacity .25s ease-out;
+    -moz-transition: opacity .25s ease-out;
+    -webkit-transition: opacity .25s ease-out;
+    position: absolute;
+    top: 281px;
+    left: 0;
+    z-index: 20;
+    text-align: center;
+    padding: 14px 0;
+  }
+  #apple_coming_soon:hover {
+    background: #fff;
+    color: #39204f;
+  }
+  #android_badge {
+    width: 147px;
+    height: 48px;
+    position: absolute;
+    top: 280px;
+    left: 160px;
+    z-index: 20;
+  }
+  #android_b {
+    background: url(images/badge_android-acf792577e6dbf39c49b66cd7c462ef6.png) no-repeat;
+    width: 147px;
+    height: 48px;
+    transition: opacity .25s ease-out;
+    -moz-transition: opacity .25s ease-out;
+    -webkit-transition: opacity .25s ease-out;
+  }
+  #android_b:hover {
+    background: url(images/badge_android_active-5a83d0db18aed591f5621dcc70ab1c49%402x.png) no-repeat!important;
+    background-size: 147px 48px!important;
+  }
+  .download {
+    position: relative;
+    top: 300px;
+    left: 200px
+  }
+  h2 {
+    color: white;
+    font-family: "Square Market",Helvetica,Arial,"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+  }
+  @font-face{font-family:"Square Market";src:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-thin-92d37a029a8039484ca858872059193b.eot);src:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-thin.eot?#iefix) format('embedded-opentype'),url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-thin-82afb3eb4b7d82dee2baf705e7245db1.woff) format('woff'), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-thin-c7647a2496b8013f5f8b503366ae62ec.ttf) format('truetype');font-weight:100}
+  .download span {
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+    position: relative;
+    top: -25px
+  }
+  .logo-container {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    -webkit-transition: opacity 1.0s linear, -webkit-transform 1s linear;
+    opacity: 0.2;
+    width: 40px;
+    height: 40px;
+    -webkit-perspective: 200px;
+  }
+  .logo-container:hover {
+    opacity: 1;
+  }
+
+  .logo-container a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translateZ( -20px );
+    -webkit-transition: -webkit-transform 1s;
+    display: block;
+  }
+
+  .logo-container a img {
+    -webkit-backface-visibility: hidden;
+    width: 36px;
+    height: 36px;
+    display: block;
+    position: absolute;
+    border: 2px solid transparent;
+  }
+
+  .logo-container img.front  { -webkit-transform: rotateY(   0deg ) translateZ( 20px ); }
+  .logo-container img.back   { -webkit-transform: rotateX( 180deg ) translateZ( 20px ); }
+  .logo-container img.right  { -webkit-transform: rotateY(  90deg ) translateZ( 20px ); }
+  .logo-container img.left   { -webkit-transform: rotateY( -90deg ) translateZ( 20px ); }
+  .logo-container img.top    { -webkit-transform: rotateX(  90deg ) translateZ( 20px ); }
+  .logo-container img.bottom { -webkit-transform: rotateX( -90deg ) translateZ( 20px ); }
+
+  .logo-container a.show-front  { -webkit-transform: translateZ( -20px ) rotateY(    0deg ); }
+  .logo-container a.show-back   { -webkit-transform: translateZ( -20px ) rotateX( -180deg ); }
+  .logo-container a.show-right  { -webkit-transform: translateZ( -20px ) rotateY(  -90deg ); }
+  .logo-container a.show-left   { -webkit-transform: translateZ( -20px ) rotateY(   90deg ); }
+  .logo-container a.show-top    { -webkit-transform: translateZ( -20px ) rotateX(  -90deg ); }
+  .logo-container a.show-bottom { -webkit-transform: translateZ( -20px ) rotateX(   90deg ); }
+
+  body.invert .logo-container {
+    -webkit-filter: invert();
+  }
+  #danger {
+    background: url("images/dangerHair.png") no-repeat center;
+    margin-top: 0px;
+    transition: .0s;
+    width: 580px;
+    height: 620px;
+    position: absolute;
+    left: -140px;
+    top: -70px;
+    z-index: 100;
+  }
+
+  #mouth {
+    background: url("images/JDMouth.png") no-repeat center;
+    width: 100%;
+    height: 100%;
+    padding-top: 26px;
+  }
+
+  #mouth.open {
+    padding-top: 50px;
+  }
+  </style>
+</head>
+<body>
+  <div id="background"></div>
+  <div id="logo" class="logo-container"></div>
+  <div class="download">
+    <img height="80px" width="80px" src="https://lh6.ggpht.com/IYKf_EJM0nnoAYGwOcCB56KHT1EZj98EnuARFJwr6CSSRbABo7kW1vCNmq8dmigq9fQ=w300-rw" alt="Cover art" aria-hidden="true" itemprop="image">
+    <span>anger</span>
+    <h2>SET UP IN SECONDS - NO COMMITMENTS</h2>
+  <!--
+    <div id="apple_badge">
+      <a href=""><div id="apple_b" title="Download on the App Store"></div></a>
+    </div>
+  -->
+    <div id="apple_coming_soon">iOS coming soon</div>
+    <div id="android_badge">
+      <a href="https://play.google.com/store/apps/details?id=com.squareup.dangerous"><div id="android_b" title="Get it on Google Play"></div></a>
+    </div>
+  </div>
+  <div id="hand">
+    <div id="iphone"></div>
+    <div id='danger'>
+      <div id='mouth'>
+      </div>
+    </div>
+    <div id='laughs'>
+      <audio>
+        <source src="sounds/DangerLaugh0.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh1.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh2.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh3.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh4.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh5.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh6.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh7.wav" type="audio/wav">
+      </audio>
+      <audio>
+        <source src="sounds/DangerLaugh8.wav" type="audio/wav">
+      </audio>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var danger = document.getElementById("danger");
+    var mouth = document.getElementById("mouth");
+    var laughs = document.getElementById("laughs");
+
+    var currentAudio = null;
+
+    timeBetweenStuff = 100;
+
+    function getDangerous() {
+      if (currentAudio != null) {
+        return;
+      }
+      currentAudio = laughs.children[Math.floor(Math.random() * 9)];
+      currentAudio.play();
+      mouthDown();
+    }
+    function mouthDown() {
+      if (!currentAudio.paused) {
+        mouth.className = 'open';
+        setTimeout(mouthUp, timeBetweenStuff);
+      } else {
+        currentAudio = null;
+      }
+    }
+    function mouthUp() {
+      mouth.className = '';
+      setTimeout(mouthDown, timeBetweenStuff);
+    }
+    danger.addEventListener("click", getDangerous, false);
+  </script>
+</body>
+
+<!-- Mirrored from jdangerous.herokuapp.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 May 2015 15:53:54 GMT -->
+</html>

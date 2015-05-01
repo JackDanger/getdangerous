@@ -1,0 +1,11 @@
+HTTrack3.48-21 launched on Fri, 01 May 2015 08:49:14 at http://jdangerous.herokuapp.com/
+(httrack http://jdangerous.herokuapp.com/ -O /www/getdangerous -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+
+HTTrack Website Copier/3.48-21 mirror complete in 5 minutes 48 seconds : 19 links scanned, 18 files written (8582835 bytes overall) [8588098 bytes received at 24678 bytes/sec], 1.5 requests per connection
+(No errors, 0 warnings, 0 messages)
